@@ -8,26 +8,6 @@ import {
 } from "@chakra-ui/react";
 import quizesData from "../assets/quizes.json";
 
-interface Options {
-  id: number;
-  label: string;
-  text: string;
-  isCorrect: boolean;
-}
-interface Quiz {
-  id: number;
-  text: string;
-  options: Options[];
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-interface QuizResponse {
-  id: number;
-  img: string;
-  name: string;
-  questions: Quiz[];
-}
-
 interface QuizCardProps {
   searchValue: string;
 }
