@@ -20,16 +20,25 @@ interface Quiz {
   options: Options[];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface QuizResponse {
   id: number;
   img: string;
   name: string;
   questions: Quiz[];
 }
-const QuizCard = () => {
+
+interface QuizCardProps {
+  searchValue: string;
+}
+const QuizCard = ({ searchValue }: QuizCardProps) => {
+  const filteredQuizes = quizesData.filter((quiz) =>
+    quiz.name.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={5} padding="10px">
-      {quizesData.map((quiz) => (
+      {filteredQuizes.map((quiz) => (
         <Card key={quiz.id} borderRadius={10} overflow="hidden">
           <Image src={quiz.img} />
           <CardBody>
