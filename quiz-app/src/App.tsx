@@ -1,5 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import SearchInput from "./components/SearchInput";
+import QuizCard from "./components/QuizCard";
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
       <GridItem area="nav">
         <SearchInput />
       </GridItem>
-      <GridItem area="main" bg="gold">
-        Main
+      <GridItem area="main">
+        <QuizCard />
       </GridItem>
     </Grid>
   );
