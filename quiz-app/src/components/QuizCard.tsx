@@ -16,7 +16,7 @@ const QuizCard = ({ searchValue }: QuizCardProps) => {
   const filteredQuizes = quizesData.filter((quiz) =>
     quiz.name.toLowerCase().includes(searchValue.toLowerCase())
   );
-  console.log(filteredQuizes);
+
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={5} padding="10px">
       {filteredQuizes.map((quiz, index) => (
