@@ -5,26 +5,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import { Progress } from "@chakra-ui/react";
 
-// interface Options {
-//   id: number;
-//   label: string;
-//   text: string;
-//   isCorrect: boolean;
-// }
-
-// interface Questions {
-//   id: number;
-//   text: string;
-//   options: Options[];
-// }
-
-// interface Quiz {
-//   id: number;
-//   img: string;
-//   name: string;
-//   questions: Questions[];
-// }
-
 const QuizDetails = () => {
   const { quizId } = useParams<{ quizId: string }>();
   const quiz = quizesData.find((quiz) => quiz.id === parseInt(quizId!));
