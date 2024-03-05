@@ -18,7 +18,7 @@ const SearchInput = ({ onSearch }: SearchInputProps) => {
   return (
     <HStack>
       <Text ml={3} fontSize="25px" fontWeight="bold" color="#2A4365">
-        Quizes
+        Quizzes
       </Text>
       <Input
         borderRadius={10}
