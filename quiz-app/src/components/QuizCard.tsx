@@ -19,9 +19,9 @@ const QuizCard = ({ searchValue }: QuizCardProps) => {
 
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={5} padding="10px">
-      {filteredQuizes.map((quiz, index) => (
+      {filteredQuizes.map((quiz) => (
         <Link to={`/quiz/${quiz.id}`}>
-          <Card key={index} borderRadius={10} overflow="hidden">
+          <Card key={quiz.id} borderRadius={10} overflow="hidden">
             <Image height="100%" src={quiz.img} />
             <CardBody>
               <Heading fontSize="xl">{quiz.name}</Heading>
